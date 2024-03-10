@@ -35,9 +35,7 @@ Watch a video demonstration of the project on [YouTube](https://www.youtube.com/
 
 Run the project with:
     
-    ```bash
-    npm install
-    ```
+    npm start  
 
 ## Endpoints
 
