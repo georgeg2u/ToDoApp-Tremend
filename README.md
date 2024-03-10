@@ -30,12 +30,13 @@ Watch a video demonstration of the project on [YouTube](https://www.youtube.com/
     ```bash
     npm install
     ```
+    
 ## Running the Project
 
 Run the project with:
-
+    
     ```bash
-    npm start
+    npm install
     ```
 
 ## Endpoints
