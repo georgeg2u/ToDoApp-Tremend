@@ -34,9 +34,9 @@ Watch a video demonstration of the project on [YouTube](https://www.youtube.com/
 
 Run the project with:
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 ## Endpoints
 
@@ -100,15 +100,15 @@ Empty array if the conditions of pagination don't match the number of existing t
 
 - Endpoint: POST /register
 -  Response:
-409 Conflict if user with the same name already exists
-201 Created, user created successfully
-400 Bad Request if user credetials are not valid
+409 Conflict if user with the same name already exists.
+201 Created, user created successfully.
+400 Bad Request if user credetials are not valid.
 
   ### User Authentication
 - Endpoint: POST /login
 - Response:
 404 Not found, if user with given credentials does not exist.
 401 Unauthorized, if username or password is invalid.
-200 Ok, User logged in successfully with authorization token
+200 Ok, User logged in successfully with authorization token.
 
 
