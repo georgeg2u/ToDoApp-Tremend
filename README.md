@@ -1,6 +1,6 @@
 # ToDoApp-Tremend
 
-This repository contains the solution I made for a Todo Application with NodeJS in order to evaluate my profiency in RESTful APIs.
+This repository contains the solution I made for a Todo Application with NodeJS in order to evaluate my proficiency in RESTful APIs.
 
 ## Project Demo
 
@@ -16,7 +16,7 @@ Watch a video demonstration of the project on [YouTube](https://www.youtube.com/
 1. Clone the repository:
 
     ```bash
-  https://github.com/georgeg2u/ToDoApp-Tremend.git
+    git clone https://github.com/georgeg2u/ToDoApp-Tremend.git
     ```
 
 2. Navigate to the project directory:
@@ -36,10 +36,12 @@ Run the project with:
 
 ```bash
 npm start
+```
 
 ## Endpoints
 
-  ###Create a Todo
+  ### Create a Todo
+  
 Endpoint: POST /todos
 Request Body:
 {
@@ -51,19 +53,20 @@ Response:
 400 Bad Request on invalid input.
 409 if todo with the same title already exists.
 
-  ###Retrieve a list of all todos
+  ### Retrieve a list of all todos
+  
 Endpoint: GET /todos
 Response:
 200 OK with an array of all todos.
 
-  ###Retrieve a specific todo by its ID
+  ### Retrieve a specific todo by its ID
 
 Endpoint: GET /todos/:id
 Response:
 200 OK with the specific todo object.
 404 Not Found if the todo with the given ID does not exist.
 
-  ###Get paged todos
+  ### Get paged todos
 
 Endpoint: GET /todos/paged-todos
 Query Parameters:
@@ -73,7 +76,7 @@ Response:
 200 OK with the paged todos.
 Empty array if the conditions of pagination don't match the number of existing todos.
 
-  ###Update a todo
+  ### Update a todo
 
 Endpoint: PUT /todos/:id
 Request Body:
@@ -86,14 +89,14 @@ Response:
 409 if another todo with the same title already exists.
 404 if the todo was not found.
 
-  ###Delete a todo
+  ### Delete a todo
 
 Endpoint: DELETE /todos/:id
 Response:
 404 Not Found if todo was not found.
 200 OK if the todo was deleted successfully.
 
-  ###User Registration
+  ### User Registration
 
 Endpoint: POST /register
 409 Conflict if user with the same name already exists
