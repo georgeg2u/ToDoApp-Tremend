@@ -7,7 +7,7 @@ const createTodo = async (req, res) => {
     if (error) {
       return res.status(400).send({message: error.details[0].message});
     }
-    const existingTodo = await TodoModel.findOne({title: req.body.title});
+    const existingTodo = await TodoModel.findOne({title: req.body.title, userId:req.body.userId});
     if (existingTodo) {
       return res
         .status(409)
@@ -40,7 +40,7 @@ const getPagedTodos = async (req, res) => {
     const offset = parseInt(req.query.offset) || 0;
     const limit = parseInt(req.query.limit) || 10;
 
-    const pagedTodos = await TodoModel.find({}, "-__v")
+    const pagedTodos = await TodoModel.find({userId:req.body.userId}, "-__v")
       .skip(offset)
       .limit(limit);
 
@@ -77,7 +77,7 @@ const updateTodo = async (req, res) => {
     const id = req.params.id;
     const {title} = req.body;
 
-    const existingTodoWithSameName = await TodoModel.findOne({title});
+    const existingTodoWithSameName = await TodoModel.findOne({title: title, userId: req.body.userId});
 
     if (existingTodoWithSameName && existingTodoWithSameName._id != id) {
       return res.status(409).send({message: "Another todo with this title already exist. Please choose another title."});
@@ -108,7 +108,7 @@ const updateTodo = async (req, res) => {
 const deleteTodo = async (req, res) => {
   try {
       const id = req.params.id;
-      const deletedTodo = await TodoModel.findOneAndDelete({_id: id})
+      const deletedTodo = await TodoModel.findOneAndDelete({_id: id, userId: req.body.userId})
 
       if (!deletedTodo) {
         return res.status(404).send({message: "Todo not found."})

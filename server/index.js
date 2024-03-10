@@ -10,9 +10,9 @@ connection();
 const app = express();
 app.use(express.json());
 
-app.use("/api/todos", todoRoutes);
-app.use("/api/register", registerRoutes);
-app.use("/api/login", authenticationRoutes);
+app.use("/todos", todoRoutes);
+app.use("/register", registerRoutes);
+app.use("/login", authenticationRoutes);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
