@@ -4,7 +4,7 @@ This repository contains the solution I made for a Todo Application with NodeJS 
 
 ## Project Demo
 
-Watch a video demonstration of the project on [YouTube](https://www.youtube.com/), or watch it here on GitHub:
+Watch a video demonstration of the project on [YouTube](https://youtu.be/Ek0O7ODP49A).
 
 ## System Requirements
 
